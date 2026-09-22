@@ -2303,50 +2303,68 @@ h1 {
   color: #FFD700 !important;
 }
 
-/* ============================= */
-/* ADAPTACIÓN PARA CELULARES     */
-/* ============================= */
+/* ================================= */
+/* ADAPTACIÓN PARA CELULARES 📱      */
+/* ================================= */
 
 @media screen and (max-width: 600px) {
 
-  /* Evita que la página se mueva horizontalmente */
   html,
   body {
     width: 100%;
-    max-width: 100%;
+    min-height: 100%;
     overflow-x: hidden;
+    overflow-y: auto;
   }
 
-  /* Contenedor de las flores */
+  /* Texto del mensaje */
+  .titulo {
+    position: relative;
+    z-index: 20;
+
+    width: 88%;
+    max-width: 88%;
+
+    margin: 0 auto;
+    padding: 30px 0 100px 0;
+
+    font-size: 16px;
+    line-height: 1.6;
+
+    text-align: center;
+
+    box-sizing: border-box;
+
+    height: auto;
+    max-height: none;
+
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Fondo */
+  .night {
+    min-height: 100vh;
+    height: 100vh;
+  }
+
+  /* Flores más pequeñas en celular */
   .flowers {
     transform: scale(0.65);
     transform-origin: bottom center;
   }
 
-  /* Mensaje */
-  .titulo {
-    width: 90%;
-    max-width: 90%;
-    font-size: 18px;
-    line-height: 1.4;
-    text-align: center;
-
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  /* Mensaje para activar música */
+  /* Mensaje para iniciar la música */
   #mensaje-musica {
-    width: auto;
-    max-width: 85%;
+    width: 80%;
+    max-width: 80%;
+
+    box-sizing: border-box;
+
     font-size: 14px;
     padding: 10px 16px;
-    white-space: nowrap;
-  }
 
-  /* Evita que elementos demasiado grandes generen desplazamiento */
-  .night {
-    width: 100%;
-    overflow: hidden;
+    text-align: center;
+    white-space: normal;
   }
 }
