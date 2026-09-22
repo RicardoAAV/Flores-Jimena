@@ -2313,11 +2313,13 @@ h1 {
   body {
     width: 100%;
     min-height: 100%;
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
     overflow-y: auto;
   }
 
-  /* Texto del mensaje */
+  /* Texto */
   .titulo {
     position: relative;
     z-index: 20;
@@ -2348,17 +2350,26 @@ h1 {
     height: 100vh;
   }
 
-  /* Flores más pequeñas en celular */
+  /* FLORES EN CELULAR */
   .flowers {
-    transform: scale(0.65);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+
+    width: 100%;
+    transform: translateX(-50%) scale(0.65);
     transform-origin: bottom center;
   }
 
-  /* Mensaje para iniciar la música */
+  /* Evita que las flores provoquen desplazamiento */
+  .flower {
+    max-width: 100%;
+  }
+
+  /* Mensaje de música */
   #mensaje-musica {
     width: 80%;
     max-width: 80%;
-
     box-sizing: border-box;
 
     font-size: 14px;
