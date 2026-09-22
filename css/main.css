@@ -2302,3 +2302,51 @@ h1 {
 .titulo {
   color: #FFD700 !important;
 }
+
+/* ============================= */
+/* ADAPTACIÓN PARA CELULARES     */
+/* ============================= */
+
+@media screen and (max-width: 600px) {
+
+  /* Evita que la página se mueva horizontalmente */
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Contenedor de las flores */
+  .flowers {
+    transform: scale(0.65);
+    transform-origin: bottom center;
+  }
+
+  /* Mensaje */
+  .titulo {
+    width: 90%;
+    max-width: 90%;
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: center;
+
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Mensaje para activar música */
+  #mensaje-musica {
+    width: auto;
+    max-width: 85%;
+    font-size: 14px;
+    padding: 10px 16px;
+    white-space: nowrap;
+  }
+
+  /* Evita que elementos demasiado grandes generen desplazamiento */
+  .night {
+    width: 100%;
+    overflow: hidden;
+  }
+}
